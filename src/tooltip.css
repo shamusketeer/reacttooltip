@@ -1,0 +1,64 @@
+body{
+    background-color: aqua;
+}
+.tooltip {
+    position: relative;
+    display: inline-block;
+    border-bottom: 1px solid black;
+}
+.tooltip .tooltiptext{
+    visibility: hidden;
+    background-color: brown;
+    width: 220px;
+    color: white;
+    text-align: center;
+    position: absolute;
+    z-index: 1;
+    padding: 5px 0;
+    border-radius: 6px;
+}
+.tooltip:hover .tooltiptext{
+    visibility: visible;
+}
+.App div :first-child .tooltip:first-child .tooltiptext::after{
+    content: " ";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: rgb(0, 0, 0, 0.5) transparent transparent transparent ;
+}
+.App div :first-child .tooltip:nth-child(2) .tooltiptext::after{
+    content: " ";
+    position: absolute;
+    top: 50%;
+    left: 100%;
+    margin-top: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: transparent transparent transparent rgb(0, 0, 0, 0.5);
+}
+
+.App div :nth-child(2) .tooltip:first-child .tooltiptext::after{
+    content: " ";
+    position: absolute;
+    top: 50%;
+    left: 100%;
+    margin-top: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: transparent transparent transparent rgb(0, 0, 0, 0.5);
+}
+
+.App div :nth-child(2) .tooltip:nth-child(2) .tooltiptext::after{
+    content: " ";
+    position: absolute;
+    top: 50%;
+    left: 100%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: transparent rgb(0, 0, 0, 0.5) transparent transparent ;
+}
